@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+     <link href="css.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand|Megrim|Lora" rel="stylesheet"> 
+    <link rel="icon" href="favicon.ico">
+    
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		
+    <title>About - Quiet Distance</title>
+    </head>
+    
+    
+    <body>
+		<header>
+				<div id="header">
+
+
+					<h1 class="site-title"><a href="https://quietdistance.net/" >Quiet Distance</a></h1>
+
+
+					<div class="main-navigation">
+						<a href="javascript:void(0);" class="icon">☰</a>
+						<a href="about.html">about</a> 
+						<a href="gallery.html">gallery</a> 
+						<div class="dropdown">
+							<a class="drop-link" id="comic-link">comics</a> 		
+							<div class="drop-menu" id="comic-menu">
+								<div id="terribad">
+									<a href="terribad.html">4komas</a>
+								</div>
+								<a href="http://quietdistance.net/memorabilia">Memorabilia</a>
+							</div>
+						</div>
+						<a href="http://blog.quietdistance.net/">blog</a>
+					</div>
+				</div>
+			</header>
+
+
+<main>
+		
+	<div class="text">
+        
+        <p>Hi, my name is Jingyao (静遥). I’m a medical student based in Cambridge, UK.</p>
+<p>I like reading, walking, and staring at the ceiling wondering what the world will be like in 20 years when artificial intelligence takes over. I also like to draw.</p>
+<p><em>Memorabilia </em>is my first, and current, comic project. </p>
+        <p>I post mainly on <a href="http://escentia.tumblr.com">Tumblr</a> and <a href="http://tapas.io/escente">Tapas</a> these days. Most of my old stuff can be found on <a href="http://escente.deviantart.com">Deviantart</a>. If you like my work, why not treat me to a&nbsp;<a href="https://ko-fi.com/escente">Ko-fi</a>? :D</p>
+        <p>To say hi, drop me an e-mail at:</p>
+<img id="paprikasauce" src="images/paprikasauce.png" >
+	
+	
+	</div></main>
+        
+
+
+<footer> </footer>
+    <script>
+        	jQuery(document).ready(function( $ ) {
+
+		//responsive menu
+		$('.main-navigation').click(function(e) { 
+			e.stopPropagation();
+		});
+
+		$('a.icon').click(function(){
+			$('.main-navigation').toggleClass('responsive');
+		});
+
+		$(document).click(function(){  
+			$('.main-navigation').removeClass('responsive'); 
+
+		});
+
+
+		//dropdown menu
+		$('.dropdown').click(function(e) { 
+			e.stopPropagation();
+		});
+
+
+		$('#comic-link').click(function() {
+			$('#comic-menu').slideDown();
+		});
+
+		$(document).click(function(){  
+			$('.drop-menu').slideUp(); 
+
+		});
+
+		var delay=3000, setTimeoutConst;
+		$('#comic-menu').hover(function(){
+			setTimeoutConst = setTimeout(function(){
+				$('#terribad').slideDown(2000);
+			}, delay);
+		},function(){
+			clearTimeout(setTimeoutConst );
+		});
+
+
+		$('#comic-menu').mouseleave(function(){
+			$('#terribad').slideUp();
+		});
+
+		//footer text
+		var emojis = ['(ﾉﾟ▽ﾟ)ﾉ',
+					  '(ง •̀ω•́)ง✧',
+					  '(≖ᴗ≖✿)', 
+					  '(⊙ᗜ⊙)',
+					  '_(┐「ε:)_♡',
+					  '〜(꒪꒳꒪)〜'
+					 ];
+		var rand = emojis[Math.floor(Math.random() * emojis.length)];
+		var footerText =  '<p>COPYRIGHT &copy ZHANG JINGYAO 2019 ' + rand + '</p>';
+		$('footer').html(footerText);
+	});
+
+
+</script>
+    </body></html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+     <link href="css.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand|Megrim|Lora" rel="stylesheet"> 
+    <link rel="icon" href="favicon.ico">
+    
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		
+    <title>Quiet Distance</title>
+    </head>
+    
+    
+    <body>
+		<header>
+				<div id="header">
+
+
+					<h1 class="site-title"><a href="https://quietdistance.net/" >Quiet Distance</a></h1>
+
+
+					<div class="main-navigation">
+						<a href="javascript:void(0);" class="icon">☰</a>
+						<a href="about.html">about</a> 
+						<a href="gallery.html">gallery</a> 
+						<div class="dropdown">
+							<a class="drop-link" id="comic-link">comics</a> 		
+							<div class="drop-menu" id="comic-menu">
+								<div id="terribad">
+									<a href="terribad.html">4komas</a>
+								</div>
+								<a href="http://quietdistance.net/memorabilia">Memorabilia</a>
+							</div>
+						</div>
+						<a href="http://blog.quietdistance.net/">blog</a>
+					</div>
+				</div>
+			</header>
+
+
+<main>
+		<img src="images/landingmerged24.jpg" id="headerImage">
+
+	</main><!-- #main -->
+
+
+
+<footer> </footer>
+<script>
+	jQuery(document).ready(function( $ ) {
+		$(window).on('load', function() {
+			//show landing page image
+			$('#headerImage').animate({opacity: '1'}, 2000);
+
+		//responsive menu
+		$('.main-navigation').click(function(e) { 
+			e.stopPropagation();
+		});
+
+		$('a.icon').click(function(){
+			$('.main-navigation').toggleClass('responsive');
+		});
+
+		$(document).click(function(){  
+			$('.main-navigation').removeClass('responsive'); 
+
+		});
+
+
+		//dropdown menu
+		$('.dropdown').click(function(e) { 
+			e.stopPropagation();
+		});
+
+
+		$('#comic-link').click(function() {
+			$('#comic-menu').slideDown();
+		});
+
+		$(document).click(function(){  
+			$('.drop-menu').slideUp(); 
+
+		});
+
+		var delay=3000, setTimeoutConst;
+		$('#comic-menu').hover(function(){
+			setTimeoutConst = setTimeout(function(){
+				$('#terribad').slideDown(2000);
+			}, delay);
+		},function(){
+			clearTimeout(setTimeoutConst );
+		});
+
+
+		$('#comic-menu').mouseleave(function(){
+			$('#terribad').slideUp();
+		});
+
+		//footer text
+		var emojis = ['(ﾉﾟ▽ﾟ)ﾉ',
+					  '(ง •̀ω•́)ง✧',
+					  '(≖ᴗ≖✿)', 
+					  '(⊙ᗜ⊙)',
+					  '_(┐「ε:)_♡',
+					  '〜(꒪꒳꒪)〜'
+					 ];
+		var rand = emojis[Math.floor(Math.random() * emojis.length)];
+		var footerText =  '<p>COPYRIGHT &copy ZHANG JINGYAO 2019 ' + rand + '</p>';
+		$('footer').html(footerText);
+	});
+
+
+</script>
+
+    </body></html>
