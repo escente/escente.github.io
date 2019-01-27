@@ -281,14 +281,9 @@ main a{
 
 
 .gallery{
-	padding-top:70px;
     width:100%;
-	}
-
-.gallery:after {
-  content: '';
-  display: block;
-  clear: both;
+    margin:auto;
+	padding-top:70px;
 }
 
 
@@ -302,37 +297,30 @@ main a{
 }
 
 .gallery-item{
-    display:block;
-	float:left;
-    width:25%;
+    width:100%;
+    overflow: hidden; 
+    float:left;
+   
 }
 
-@media screen and (max-width: 1500px) and (min-width: 901px) {
-.gallery-item{
-		width:33.3%;
-	}
-}
-
-@media screen and (max-width: 900px) and (min-width: 481px) {
+@media screen and (min-width: 600px) {
 .gallery-item{
 		width:50%;
 	}
 }
 
-
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 900px) {
 .gallery-item{
-		width:100%;
+		width:33.33%;
 	}
 }
 
 
-
-.gallery-item img{
-	display:block;
-    max-width: 100%;
-	transition:0.3s;
+@media screen and (min-width: 1400px) {
+.gallery-item{
+		width:25%;
 	}
+}
 
 
 .date{
