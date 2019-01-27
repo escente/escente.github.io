@@ -293,7 +293,7 @@ main a{
 
 
 @media screen and (max-width: 680px){
-	#gallery{
+	.gallery{
 		padding-top:100px;
 	}
 	#headerImage{

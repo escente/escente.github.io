@@ -106,13 +106,11 @@
 <script>
 $(window).on('load', function(){
     ///init masonry
-var $grid = $('.gallery').masonry({
-  itemSelector: '.gallery-item',
+var $grid = $('div.gallery').masonry({
+  itemSelector: 'a.gallery-item',
   percentPosition: true
 });
-    
-
-    
+       
 // layout Masonry after each image loads
 $grid.imagesLoaded().progress( function() {
   $grid.masonry('layout');
