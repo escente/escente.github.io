@@ -82,37 +82,42 @@
         
 <footer> </footer>
 <script>
-	jQuery(document).ready(function( $ ) {
-        
-var $grid = $('div.gallery').masonry({
-  itemSelector: 'a.gallery-item',
- visibleStyle: { transform: 'translateY(0)', opacity: 1 },
-  hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
-});
-        
-// layout Masonry after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.masonry();
-});  
-
-    //// //magnific popup
-$('.gallery').magnificPopup({
-    delegate: '.gallery-item',
-    type: 'image',
-    closeOnContentClick: true,
-    closeBtnInside: false,
-    image: {
-        verticalFit: true,
-        titleSrc: 'caption',
-        cursor:null
-    },
-    zoom: {
-        enabled: true,
-        duration: 250 // don't foget to change the duration also in CSS
-    }
-});
+    $(window).on('load', function(){
+    ///init masonry
+        var $grid = $('.gallery').masonry({
+          itemSelector: '.gallery-item',
+          percentPosition: true
+        });
 
 
+
+        // layout Masonry after each image loads
+        $grid.imagesLoaded().progress( function() {
+          $grid.masonry('layout');
+        });
+
+            //// //magnific popup
+        $('.gallery').magnificPopup({
+            delegate: '.gallery-item',
+            type: 'image',
+            closeOnContentClick: true,
+            closeBtnInside: false,
+            image: {
+                verticalFit: true,
+                titleSrc: 'caption',
+                cursor:null
+            },
+            zoom: {
+                enabled: true,
+                duration: 250 // don't foget to change the duration also in CSS
+            }
+        });
+
+
+}); 
+    
+    
+	$(document).ready(function() {
 
 		//responsive menu
 		$('.main-navigation').click(function(e) { 
