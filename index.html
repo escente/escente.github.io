@@ -53,10 +53,7 @@
 <footer> </footer>
 <script>
 	jQuery(document).ready(function( $ ) {
-		$(window).on('load', function() {
-			//show landing page image
-			$('#headerImage').animate({opacity: '1'}, 2000);
-
+		
 		//responsive menu
 		$('.main-navigation').click(function(e) { 
 			e.stopPropagation();
@@ -113,7 +110,7 @@
 		var footerText =  '<p>COPYRIGHT &copy ZHANG JINGYAO 2019 ' + rand + '</p>';
 		$('footer').html(footerText);
 	});
-});
+
 
 
 </script>
