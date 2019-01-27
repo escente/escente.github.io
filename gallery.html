@@ -51,7 +51,6 @@
             <a class="gallery-item" href="images/.jpg" caption=" "  ><div class='date'> </div><img src="images/small/.jpg" /></a> 
             -->
 
-
             <a class="gallery-item" href="images/lolololol.jpg" caption=" "  ><div class='date'>Dec 2018</div><img src="images/small/lolololol.jpg" />
             </a>
 
@@ -93,9 +92,6 @@
 
              <a class="gallery-item" href="images/rpg%20design.jpg" caption=" "  ><div class='date'>Jun 2016</div><img src="images/small/rpg%20design.jpg" /></a> 
 
-
-
-
     </div>
 
         <div class="gallery-nav">  
@@ -106,36 +102,9 @@
 <script>
 
 $(document).ready(function() {
-         ///init masonry
-    var $grid = $('.gallery').masonry({
-      itemSelector: '.gallery-item',
-       percentPosition: true
-    });
-
-    // layout Masonry after each image loads
-    $grid.imagesLoaded().progress( function() {
-      $grid.masonry('layout');
-    });
-
-    //// //magnific popup
-$('.gallery').magnificPopup({
-    delegate: '.gallery-item',
-    type: 'image',
-    closeOnContentClick: true,
-    closeBtnInside: false,
-    image: {
-        verticalFit: true,
-        titleSrc: 'caption',
-        cursor:null
-    },
-    zoom: {
-        enabled: true,
-        duration: 250 // don't foget to change the duration also in CSS
-    }
-});
 
 
-    
+
 
         //responsive menu
         $('.main-navigation').click(function(e) { 
@@ -193,6 +162,35 @@ $('.gallery').magnificPopup({
         var footerText =  '<p>COPYRIGHT &copy ZHANG JINGYAO 2019 ' + rand + '</p>';
         $('footer').html(footerText);
     });
+
+
+        ///init masonry
+      var $grid = $('.gallery').masonry({
+      itemSelector:'.gallery-item'    
+    });
+
+    // layout Masonry after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry('layout');
+    });
+
+        //// //magnific popup
+    $('.gallery').magnificPopup({
+        delegate: '.gallery-item',
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        image: {
+            verticalFit: true,
+            titleSrc: 'caption',
+            cursor:null
+        },
+        zoom: {
+            enabled: true,
+            duration: 250 // don't foget to change the duration also in CSS
+        }
+});
+
 
 </script>
 
