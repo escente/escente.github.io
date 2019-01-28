@@ -82,99 +82,94 @@
         
 <footer> </footer>
 <script>
-    $(window).on('load', function(){
-    ///init masonry
-        var $grid = $('.gallery').masonry({
-          itemSelector: '.gallery-item',
-          percentPosition: true
+   $(document).ready(function() {
+
+
+        //responsive menu
+        $('.main-navigation').click(function(e) { 
+            e.stopPropagation();
+        });
+
+        $('a.icon').click(function(){
+            $('.main-navigation').toggleClass('responsive');
+        });
+
+        $(document).click(function(){  
+            $('.main-navigation').removeClass('responsive'); 
+
         });
 
 
-
-        // layout Masonry after each image loads
-        $grid.imagesLoaded().progress( function() {
-          $grid.masonry('layout');
-        });
-
-            //// //magnific popup
-        $('.gallery').magnificPopup({
-            delegate: '.gallery-item',
-            type: 'image',
-            closeOnContentClick: true,
-            closeBtnInside: false,
-            image: {
-                verticalFit: true,
-                titleSrc: 'caption',
-                cursor:null
-            },
-            zoom: {
-                enabled: true,
-                duration: 250 // don't foget to change the duration also in CSS
-            }
+        //dropdown menu
+        $('.dropdown').click(function(e) { 
+            e.stopPropagation();
         });
 
 
-}); 
-    
-    
-	$(document).ready(function() {
+        $('#comic-link').click(function() {
+            $('#comic-menu').slideDown();
+        });
 
-		//responsive menu
-		$('.main-navigation').click(function(e) { 
-			e.stopPropagation();
-		});
+        $(document).click(function(){  
+            $('.drop-menu').slideUp(); 
 
-		$('a.icon').click(function(){
-			$('.main-navigation').toggleClass('responsive');
-		});
+        });
 
-		$(document).click(function(){  
-			$('.main-navigation').removeClass('responsive'); 
-
-		});
-
-
-		//dropdown menu
-		$('.dropdown').click(function(e) { 
-			e.stopPropagation();
-		});
+        var delay=3000, setTimeoutConst;
+        $('#comic-menu').hover(function(){
+            setTimeoutConst = setTimeout(function(){
+                $('#terribad').slideDown(2000);
+            }, delay);
+        },function(){
+            clearTimeout(setTimeoutConst );
+        });
 
 
-		$('#comic-link').click(function() {
-			$('#comic-menu').slideDown();
-		});
+        $('#comic-menu').mouseleave(function(){
+            $('#terribad').slideUp();
+        });
 
-		$(document).click(function(){  
-			$('.drop-menu').slideUp(); 
+        //footer text
+        var emojis = ['(ﾉﾟ▽ﾟ)ﾉ',
+                      '(ง •̀ω•́)ง✧',
+                      '(≖ᴗ≖✿)', 
+                      '(⊙ᗜ⊙)',
+                      '_(┐「ε:)_♡',
+                      '〜(꒪꒳꒪)〜'
+                     ];
+        var rand = emojis[Math.floor(Math.random() * emojis.length)];
+        var footerText =  '<p>COPYRIGHT &copy ZHANG JINGYAO 2019 ' + rand + '</p>';
+        $('footer').html(footerText);
+    });
 
-		});
 
-		var delay=3000, setTimeoutConst;
-		$('#comic-menu').hover(function(){
-			setTimeoutConst = setTimeout(function(){
-				$('#terribad').slideDown(2000);
-			}, delay);
-		},function(){
-			clearTimeout(setTimeoutConst );
-		});
+        ///init masonry
+      var $grid = $('div.gallery').masonry({
+      itemSelector:'a.gallery-item',
+          stagger:30
+    });
 
+    // layout Masonry after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry('layout');
+    });
 
-		$('#comic-menu').mouseleave(function(){
-			$('#terribad').slideUp();
-		});
-
-		//footer text
-		var emojis = ['(ﾉﾟ▽ﾟ)ﾉ',
-					  '(ง •̀ω•́)ง✧',
-					  '(≖ᴗ≖✿)', 
-					  '(⊙ᗜ⊙)',
-					  '_(┐「ε:)_♡',
-					  '〜(꒪꒳꒪)〜'
-					 ];
-		var rand = emojis[Math.floor(Math.random() * emojis.length)];
-		var footerText =  '<p>COPYRIGHT &copy ZHANG JINGYAO 2019 ' + rand + '</p>';
-		$('footer').html(footerText);
-	});
+        //// //magnific popup
+    $('.gallery').magnificPopup({
+        delegate: '.gallery-item',
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        image: {
+            verticalFit: true,
+            titleSrc: 'caption',
+            cursor:null
+        },
+        zoom: {
+            enabled: true,
+            duration: 250 // don't foget to change the duration also in CSS
+        }
+});
 
 
 </script>
