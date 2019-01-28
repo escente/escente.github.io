@@ -259,7 +259,7 @@ main a{
 	top:0px;
 	width:100%;
 	height:100%;
-	padding-top:70px;
+	padding-top:100px;
 	padding-bottom:48px;
 	object-fit:cover;
 }
@@ -267,16 +267,16 @@ main a{
 
 .gallery{
     width:100%;
-	padding-top:70px;
+	padding-top:100px;
 }
 
 
-@media screen and (max-width: 680px){
+@media screen and (min-width: 681px){
 	.gallery{
-		padding-top:100px;
+		padding-top:70px;
 	}
 	#headerImage{
-		padding-top:100px;
+		padding-top:70px;
 	}
 }
 
