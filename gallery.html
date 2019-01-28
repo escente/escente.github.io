@@ -104,8 +104,6 @@
 $(document).ready(function() {
 
 
-
-
         //responsive menu
         $('.main-navigation').click(function(e) { 
             e.stopPropagation();
@@ -165,8 +163,8 @@ $(document).ready(function() {
 
 
         ///init masonry
-      var $grid = $('.gallery').masonry({
-      itemSelector:'.gallery-item'    
+      var $grid = $('div.gallery').masonry({
+      itemSelector:'a.gallery-item',    
     });
 
     // layout Masonry after each image loads
