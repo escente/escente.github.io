@@ -11,7 +11,9 @@
     <link rel="icon" href="favicon.ico">
     
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-		
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/footer.js"></script>
+    
     <title>Quiet Distance</title>
     </head>
     
@@ -53,66 +55,9 @@
 <footer> </footer>
 <script>
 	jQuery(document).ready(function( $ ) {
-		
-		//responsive menu
-		$('.main-navigation').click(function(e) { 
-			e.stopPropagation();
-		});
-
-		$('a.icon').click(function(){
-			$('.main-navigation').toggleClass('responsive');
-		});
-
-		$(document).click(function(){  
-			$('.main-navigation').removeClass('responsive'); 
-
-		});
-
-
-		//dropdown menu
-		$('.dropdown').click(function(e) { 
-			e.stopPropagation();
-		});
-
-
-		$('#comic-link').click(function() {
-			$('#comic-menu').slideDown();
-		});
-
-		$(document).click(function(){  
-			$('.drop-menu').slideUp(); 
-
-		});
-
-		var delay=3000, setTimeoutConst;
-		$('#comic-menu').hover(function(){
-			setTimeoutConst = setTimeout(function(){
-				$('#terribad').slideDown(2000);
-			}, delay);
-		},function(){
-			clearTimeout(setTimeoutConst );
-		});
-
-
-		$('#comic-menu').mouseleave(function(){
-			$('#terribad').slideUp();
-		});
-
-		//footer text
-		var emojis = ['(ﾉﾟ▽ﾟ)ﾉ',
-					  '(ง •̀ω•́)ง✧',
-					  '(≖ᴗ≖✿)', 
-					  '(⊙ᗜ⊙)',
-					  '_(┐「ε:)_♡',
-					  '〜(꒪꒳꒪)〜'
-					 ];
-		var rand = emojis[Math.floor(Math.random() * emojis.length)];
-		var footerText =  '<p>COPYRIGHT &copy ZHANG JINGYAO 2019 ' + rand + '</p>';
-		$('footer').html(footerText);
-	});
-
-
-
+        menu();
+		footer();
+    });
 </script>
 
     </body></html>
