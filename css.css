@@ -338,6 +338,10 @@ main a{
 }
 
 .gallery-nav a{
+    margin:14px;
+}
+
+.gallery-nav a{
      font-family:'Quicksand',sans-serif;
     padding:20px;
     background-color: rgba(0,0,0,0.05)
