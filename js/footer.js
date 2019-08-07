@@ -7,6 +7,6 @@ function footer(){
 					  '〜(꒪꒳꒪)〜'
 					 ];
 		var rand = emojis[Math.floor(Math.random() * emojis.length)];
-		var footerText =  '<p>COPYRIGHT &copy ZHANG JINGYAO 2019 ' + rand + '</p>';
+		var footerText =  '<p>COPYRIGHT &copy 2018-2019 ' + rand + '</p>';
 		$('footer').html(footerText);
 	};
