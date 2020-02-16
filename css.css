@@ -369,7 +369,11 @@ div.mfp-title{
     
 }
 
-.formspree input,textarea{
+textarea{
+    resize:none;
+}
+
+.formspree input[type=text],[type=email],textarea{
     font-size: 0.9em;
     font-family: 'Open Sans', sans-serif;
     width:90%;
@@ -378,11 +382,12 @@ div.mfp-title{
     margin:5px;
 }
 
+
 #contact-button{
+    display: inline-block;
     font-size: 0.8em;
-    width:60px;
-    height: 35px;
     border-radius:6px;
+    padding:6px 10px;
     margin: 10px auto;
 }
 
