@@ -7,6 +7,6 @@ function footer(){
 					  '〜(꒪꒳꒪)〜'
 					 ];
 		var rand = emojis[Math.floor(Math.random() * emojis.length)];
-		var footerText =  '<p> &copy 2019 ' + rand + '</p>';
+		var footerText =  '<p>escente &copy 2020 ' + rand + '</p>';
 		$('footer').html(footerText);
 	};
