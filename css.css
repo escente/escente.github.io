@@ -199,6 +199,11 @@ main a{
 	max-width:700px;
 }
 
+.support{
+    text-align: center;
+}
+ 
+
 @media screen and (max-width: 800px) {
 .text, .text-wide, .text-narrow{
 		padding:7%;
@@ -206,15 +211,6 @@ main a{
 }
 
 
-#paprikasauce{
-	margin:auto;
-    width:250px;
-	
-}
-
-
-
- 
 
 
 
@@ -361,35 +357,7 @@ div.mfp-title{
 	margin:auto;
 } 
 
-.formspree{
-    margin:40px auto;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
 
-textarea{
-    resize:none;
-}
-
-.formspree input[type=text],[type=email],textarea{
-    font-size: 0.9em;
-    font-family: 'Open Sans', sans-serif;
-    width:90%;
-    max-width:300px;
-    padding:5px;
-    margin:5px;
-}
-
-
-#contact-button{
-    display: inline-block;
-    font-size: 0.8em;
-    border-radius:6px;
-    padding:6px 10px;
-    margin: 10px auto;
-}
 
 footer{
 	width:100%;
