@@ -1,379 +1,59 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-html{
-    height:100%;
-}
-
-body{
-    position:relative;
-	top:0;
-	left:0;
-	margin:0;
-	min-height:100%;
-	font-family: 'Open Sans', sans-serif;
-} 
-
-
-a{
-	text-decoration:none;
-    color:grey;
-}
-
-
-img{
-	display:block;
-	max-width:100%;
-	height:auto;
-}
-
-  
-
-#header{
-	display:-webkit-flex;
-	display:flex;
-	-webkit-justify-content:space-between;
-	justify-content:space-between;
-	width:100%;
-	padding:5px 5vw;
-	align-items:center;
-	align-content:center;
-	position:fixed;
-	background-color:white;
-	line-height:0.7em;
-	box-shadow: 0px 0px 8px rgba(0,0,0,0.10);
-	z-index:8;
-	opacity:0.97;
-}
-
-@media screen and (max-width: 700px){
-	#header{
-		-webkit-justify-content:center;
-	justify-content:center;
-		flex-direction:column;
-		align-items:center;
-	}
-	
-	.main-navigation{
-	position:relative;
-	bottom:6px;
-	}
-}
-
-
-header a{
-	color:#8f7967;
-}
-
-header a:hover{
-	opacity:0.7;
-}
-
-.site-title a{
-	display:inline-block;
-	font-size:0.9em;
-	font-family:'Megrim', serif;
-	font-weight:normal;
-	text-transform: lowercase;
-	letter-spacing:2.4px;
-	padding:3px 0; 
-} 
-
-
-.main-navigation{
-	display:-webkit-flex;
-	display:flex;
-	-webkit-justify-content:space-around;
-	justify-content:space-around;
-	align-items:center;
-	width:420px;
-	padding:10px;
-}
-
-.main-navigation a{
-	text-transform: uppercase;
-	text-align:center;
-	font-size:0.86em;
-	font-family: 'Quicksand', sans-serif;
-	font-weight:500;
-	letter-spacing:2.5px;
-
-}
-
-
-.dropdown{
-	cursor:pointer;
-}
-
-
-.drop-menu{
-	display:none;
-	background-color:rgb(253,252,252);
-	position:absolute;
-	margin-top:10px;
-	box-shadow:1px 4px 8px 0px rgba(0,0,0,0.2);
-	z-index:10;
-	 
-}
-
-.drop-menu a{
-	display:block;
-	padding:1.2em;
-}
-
-.drop-menu a:hover{
-	opacity:1;
-	background-color:#f7f7f7;
-}
-
-#terribad{
-	display:none;
-}
-
-
-.main-navigation .icon{
-	display:none;
-	font-size:1.2em;
-	
-}
-@media screen and (max-width: 500px){
-
-  .main-navigation a{
-		display: none;
-	}
-  .main-navigation a.icon {
-    display: block;
-		margin:auto;
-  }
-	 
-	.main-navigation.responsive{
-		position:relative;
-		flex-direction:column;
-	}
-	
-  .main-navigation.responsive a{
-    display: block;
-		padding:20px;
-	}
-}	
-
-
- 
-
-h1{
-	font-family:'Lora', serif;
-	letter-spacing:1.5px;
-	text-transform:uppercase;
-	text-align:center;
-}
- 
-main{
-	padding:160px 0;
-}
- 
-main p {
-	width:100%;
-}
-
-main a{
-	font-weight:bold;
-	color:black;
-}
-
-.text, .text-narrow, .text-wide{
-	margin:auto;
-}
-
-.text{
-	max-width:650px;
-}
-
-.text-narrow{
-	max-width:550px;
-}
-
-.text-wide{
-	max-width:700px;
-}
-
-.support{
-    text-align: center;
-}
- 
-
-@media screen and (max-width: 800px) {
-.text, .text-wide, .text-narrow{
-		padding:7%;
-	}
-}
-
-
-
-
-
-#comic-gallery{
-	max-width:1200px;
-	display:-webkit-flex;
-	display:flex;
-	-webkit-flex-wrap:wrap;
-	flex-wrap:wrap;
-	-webkit-justify-content:center;
-	justify-content:center;
-	padding:40px;
-	margin:auto;
-}
-
-.comic-item{
-    width:200px;
-    margin:30px;
-}
-
-.comic-caption{
-	margin:30px;
-    text-align:center;
-	text-transform:capitalize;
-}
-
-#comic-gallery img{
-	box-shadow:1px 1px 6px rgba(0,0,0,0.1);
-	transition:0.6s;
-}
-
-#comic-gallery img:hover{
-	-webkit-filter:brightness(80%);
-	filter:brightness(80%);
-	
-}
-
-
-#headerImage{
-	position:fixed;
-	left:0;
-	top:0px;
-	width:100%;
-	height:100%;
-	padding-top:100px;
-	padding-bottom:48px;
-	object-fit:cover;
-}
-
-
-.gallery{
-    width:100%;
-	padding-top:100px;
-}
-
-
-@media screen and (min-width: 681px){
-	.gallery{
-		padding-top:70px;
-	}
-	#headerImage{
-		padding-top:70px;
-	}
-}
-
-.gallery-item{
-    float:left;
-    width:100%;
-    overflow: hidden; 
-       
-}
-
-@media screen and (min-width: 600px) {
-.gallery-item{
-		width:50%;
-	}
-}
-
-@media screen and (min-width: 900px) {
-.gallery-item{
-		width:33.33%;
-	}
-}
-
-
-@media screen and (min-width: 1400px) {
-.gallery-item{
-		width:25%;
-	}
-}
-
-
-
-.date{
-    position:absolute;
-    width:100%;
-    height:100%;
-    display:flex;
+.everything {
+   display: flex;
+    position:relative; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family:"Open Sans", sans-serif;
-    color:white;
-    font-weight:bold;
-    letter-spacing:0.3em;
-    text-transform: uppercase;
-    background-color: rgba(0,0,0,0.6);
-    opacity:0;
-    transition:0.3s;
+    width:60vw;
+    max-width:520px; 
+    padding:15vh 0 60px 0;
+    margin:auto;
 }
 
-.gallery-item:hover>.date{
+
+html,body {
+    height: 100%;
+    margin:0;
+    padding:0;
+    background-color: #fdfcfb;
+}
+
+.icon-links {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:auto;
+}
+
+.icon {
+    display:inline-block;
+    width:46px;
+    margin:8px;
+    opacity:0.66;
+}
+
+.icon:hover{
     opacity:1;
 }
 
-
-
-.gallery-nav {
-   padding:120px 0;
-    text-align: center;
-    cursor:pointer; 
+.header {
+    font-size: 2em;
+    font-family: 'IM Fell Double Pica', serif;
+    letter-spacing:0.4em;
+    margin-bottom: 20px;
 }
 
-.gallery-nav a{
-    margin:14px;
+.subheader {
+    font-size:1em;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 0.2em;
+    margin-bottom: 80px;
 }
 
-.gallery-nav a{
-     font-family:'Quicksand',sans-serif;
-    padding:20px;
-    background-color: rgba(0,0,0,0.05)
-}
-
-.mfp-bottom-bar{
-	margin:0;
-}
-
-div.mfp-title{
-	text-align:center;
-	padding:0px;
-	padding-top:16px;
-	padding-bottom:80px;
-	width:100%;
-	max-width:600px;
-	margin:auto;
-} 
-
-
-
-footer{
-	width:100%;
-	position:absolute;
-	bottom:0;
-	text-align:center;
-	padding:6px 0;
-	cursor:default;
-	background-color:white;
-}
-
-footer p{
-	color:#8f7967;
-	font-size:0.7em;
-	opacity:0.7;
-	font-family:'Quicksand','Arial', sans-serif;
-	font-weight:400;
-	letter-spacing:1px;
+.intro {
+    font-family: 'IM Fell Double Pica',serif;
+   text-align: center;
+    margin-bottom: 40px;
+    
+    
 }
