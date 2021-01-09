@@ -37,22 +37,22 @@ html,body {
 }
 
 .header {
-    font-size: 2em;
+    font-size: 1.8em;
     font-family: 'IM Fell Double Pica', serif;
     letter-spacing:0.4em;
     margin-bottom: 20px;
 }
 
 .subheader {
-    font-size:1em;
+    font-size:0.9em;
     font-family: 'Work Sans', sans-serif;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.3em;
     margin-bottom: 80px;
 }
 
 .intro {
     font-family: 'IM Fell Double Pica',serif;
-   text-align: center;
+   text-align: left;
     margin-bottom: 40px;
     
     
