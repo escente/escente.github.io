@@ -29,11 +29,13 @@ html,body {
     display:inline-block;
     width:46px;
     margin:8px;
+    filter: saturate(2);
     opacity:0.66;
 }
 
 .icon:hover{
     opacity:1;
+ filter:saturate(2)
 }
 
 .header {
@@ -68,11 +70,14 @@ html,body {
     text-transform: uppercase;
     text-decoration: none;
     padding:20px;
-    background-color: #e6e6e6;
+    background-color: #87F3D9;
+    opacity:0.7;
     margin-bottom:36px;
     border-radius: 6px;
+    transition:0.2s;
 }
 
 .button:hover{
-    background-color: #cccccc;
+    background-color:orange;
+    opacity:1;
 }
