@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:60vw;
+    width:70vw;
     max-width:520px; 
     padding:15vh 0 60px 0;
     margin:auto;
@@ -46,6 +46,7 @@ html,body {
 .subheader {
     font-size:0.9em;
     font-family: 'Work Sans', sans-serif;
+    font-weight: 200;
     letter-spacing: 0.3em;
     margin-bottom: 80px;
 }
@@ -56,4 +57,21 @@ html,body {
     margin-bottom: 40px;
     
     
+}
+
+.button {
+    display:inline-block;
+    font-family: Work Sans, sans-serif;
+    font-weight: 400;
+    color:white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:20px;
+    background-color: #e6e6e6;
+    margin-bottom:36px;
+    border-radius: 6px;
+}
+
+.button:hover{
+    background-color: #cccccc;
 }
