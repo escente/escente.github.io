@@ -62,19 +62,21 @@ html,body {
 }
 
 .button {
-    display:inline-block;
+    display:block;
+    width:auto;
     text-align: center;
     font-family: Work Sans, sans-serif;
     font-weight: 400;
+    line-height: 140%;
     color:white;
     text-transform: uppercase;
     text-decoration: none;
-    padding:20px;
+    padding:16px;
     background-color: #87F3D9;
     opacity:0.7;
+    margin:auto;
     margin-bottom:36px;
     border-radius: 6px;
-    transition:0.2s;
 }
 
 .button:hover{
