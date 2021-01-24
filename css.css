@@ -74,7 +74,7 @@ html,body {
     padding:16px;
     margin:auto;
     margin-bottom:36px;
-    border: 1.6px solid;
+    border: 1px solid;
     border-radius: 10px;
     transition: 0.3s;
 }
