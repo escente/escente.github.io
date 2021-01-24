@@ -29,8 +29,8 @@ html,body {
     display:inline-block;
     width:46px;
     margin:8px;
-    filter: saturate(2);
-    opacity:0.66;
+    opacity:0.7;
+    transition:0.3s;
 }
 
 .icon:hover{
@@ -68,18 +68,17 @@ html,body {
     font-family: Work Sans, sans-serif;
     font-weight: 400;
     line-height: 140%;
-    color:white;
+    color:#98E2BD;
     text-transform: uppercase;
     text-decoration: none;
     padding:16px;
-    background-color: #70DDCA;
-    opacity:0.7;
     margin:auto;
     margin-bottom:36px;
-    border-radius: 6px;
+    border: 1.6px solid;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
 .button:hover{
-    background-color:orange;
-    opacity:1;
+    color:#F2B88B;
 }
