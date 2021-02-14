@@ -1,52 +1,53 @@
 .everything {
-   display: flex;
-    position:relative; 
+    display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:70vw;
-    max-width:520px; 
-    padding:15vh 0 60px 0;
-    margin:auto;
+    width: 70vw;
+    max-width: 520px;
+    padding: 15vh 0 60px 0;
+    margin: auto;
 }
 
 
-html,body {
+html,
+body {
     height: 100%;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     background-color: #fdfcfb;
 }
 
 .icon-links {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin:auto;
+    margin: auto;
 }
 
 .icon {
-    display:inline-block;
-    width:46px;
-    margin:8px;
-    opacity:0.7;
-    transition:0.3s;
+    display: inline-block;
+    width: 46px;
+    margin: 8px;
+    opacity: 0.7;
+    transition: 0.3s;
 }
 
-.icon:hover{
-    opacity:1;
- filter:saturate(2)
+.icon:hover {
+    opacity: 1;
+    filter: saturate(2)
 }
 
 .header {
     font-size: 1.8em;
     font-family: 'IM Fell Double Pica', serif;
-    letter-spacing:0.4em;
+    letter-spacing: 0.4em;
     margin-bottom: 20px;
 }
 
 .subheader {
-    font-size:0.9em;
+    font-size: 0.9em;
     font-family: 'Work Sans', sans-serif;
     font-weight: 200;
     letter-spacing: 0.3em;
@@ -54,31 +55,36 @@ html,body {
 }
 
 .intro {
-    font-family: 'IM Fell Double Pica',serif;
-   text-align: left;
+    font-family: 'IM Fell Double Pica', serif;
+    text-align: left;
     margin-bottom: 40px;
-    
-    
+
+
 }
 
 .button {
-    display:block;
-    width:auto;
+    display: block;
+    width: auto;
     text-align: center;
     font-family: Work Sans, sans-serif;
     font-weight: 400;
     line-height: 140%;
-    color:#98E2BD;
+    color: #98E2BD;
     text-transform: uppercase;
     text-decoration: none;
-    padding:16px;
-    margin:auto;
-    margin-bottom:36px;
+    padding: 16px;
+    margin: auto;
+    margin-bottom: 36px;
     border: 1px solid;
     border-radius: 10px;
     transition: 0.3s;
 }
 
-.button:hover{
-    color:#F2B88B;
+.button:hover {
+    color: #F2B88B;
+}
+
+a {
+    color: grey;
+    font-weight: bold;
 }
