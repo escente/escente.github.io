@@ -20,10 +20,15 @@ body {
     background-color: #EDE9E3;
 }
 
-siennaa {
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    width: auto;
     text-decoration: none;
-    color: teal;
-    font-weight: bold;
+    color: inherit;
 }
 
 
@@ -32,7 +37,7 @@ siennaa {
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-    margin-top:40px;
+    margin-top: 40px;
 }
 
 .icon {
@@ -82,7 +87,7 @@ siennaa {
     line-height: 170%;
     text-transform: uppercase;
     text-decoration: none;
-    color:black;
+    color: black;
     padding: 18px;
     margin: auto;
     margin-bottom: 20px;
@@ -90,15 +95,57 @@ siennaa {
     transition: 0.3s;
 }
 
-.button:hover{
+.button:hover {
     opacity: 0.6;
 }
 
 .discord-link {
     text-decoration: none;
-    color:palevioletred;
+    color: palevioletred;
 }
 
-.discord-link:hover{
-    color:cornflowerblue;
+.discord-link:hover {
+    color: cornflowerblue;
+}
+
+.gallery {
+    width: 80%;
+    margin: 40px auto 60px auto;
+}
+
+
+.gutter-sizer {
+    width: 2.5vmax;
+}
+
+.gallery-item {
+    width: 31%;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 2.5vmax;
+}
+
+@media screen and (min-width: 561px) and (max-width: 1080px) {
+    .gallery-item {
+        width: 46%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .gallery-item {
+        width: 100%;
+    }
+}
+
+.nav {
+    display: block;
+    width: 140px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    padding: 12px;
+    margin: 30px auto 120px auto;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+
 }
