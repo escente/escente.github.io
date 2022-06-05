@@ -44,12 +44,12 @@ a {
     display: inline-block;
     width: 46px;
     margin: 8px;
-    transition: 0.3s;
+    filter: saturate(10%) brightness(103%);
 }
 
 .icon:hover {
     opacity: 0.6;
-    filter: saturate(2)
+
 }
 
 .header {
@@ -79,21 +79,21 @@ a {
 .button {
     display: block;
     width: 260px;
-    background-color: #CCD5DC;
+    background-color: #FFCE75;
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
     letter-spacing: 1.6px;
     line-height: 170%;
     text-transform: uppercase;
     text-decoration: none;
-    color: black;
+    color: #746F66;
     padding: 18px;
     margin: auto;
     margin-bottom: 20px;
     border-radius: 16px;
     transition: 0.3s;
 }
+
 
 .button:hover {
     opacity: 0.6;

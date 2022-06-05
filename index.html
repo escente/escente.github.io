@@ -47,7 +47,7 @@
             <!--<a href="mailto:escente@hotmail.sg" title="email"><img class="icon" src="mail.png"></a> -->
         </div>
     </div>
-    <div class="gallery">
+    <div class="gallery" style="display:none;">
         <div class="gutter-sizer"> </div>
 
         <a class="gallery-item" href="images/01.jpg" caption=" "> <img src="images/small/01.jpg" /></a>
@@ -85,6 +85,9 @@
     <script>
         $(document).ready(function() {
             gallery();
+
+            $('.gallery').fadeIn(2000);
+
 
         });
 
