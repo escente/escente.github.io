@@ -16,8 +16,7 @@ html,
 body {
     height: 100%;
     margin: 0;
-    padding: 0;
-    background-color: #EDE9E3;
+    background-color: #eaeaea;
 }
 
 img {
@@ -44,7 +43,7 @@ a {
     display: inline-block;
     width: 46px;
     margin: 8px;
-    filter: saturate(10%) brightness(103%);
+    filter: saturate(10%) brightness(80%);
 }
 
 .icon:hover {
@@ -147,7 +146,6 @@ div.mfp-container {
 
 div.mfp-title {
     text-align: center;
-    padding: 0px;
     padding-top: 16px;
     padding-bottom: 80px;
     width: 100%;
