@@ -37,19 +37,23 @@ a {
     justify-content: center;
     margin: auto;
     margin-top: 40px;
+    
 }
+
 
 .icon {
     display: inline-block;
-    width: 46px;
+    opacity: 0.4;
+    width: 40px;
     margin: 8px;
-    filter: saturate(10%) brightness(80%);
 }
 
 .icon:hover {
-    opacity: 0.6;
+    opacity: 0.3;
 
 }
+
+
 
 .header {
     font-size: 1.8em;
@@ -100,7 +104,8 @@ a {
 
 .discord-link {
     text-decoration: none;
-    color: palevioletred;
+    color: #e43b73;
+    font-weight:bold;
 }
 
 .discord-link:hover {
@@ -168,4 +173,7 @@ div.mfp-title {
 
 .footer {
     height: 15vh;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    font-size: x-small
 }
