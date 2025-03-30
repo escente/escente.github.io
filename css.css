@@ -175,5 +175,6 @@ div.mfp-title {
     height: 15vh;
     font-family: "Quicksand", sans-serif;
     text-align: center;
-    font-size: x-small
+    font-size: x-small;
+    opacity: 0.6;
 }
