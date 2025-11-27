@@ -158,6 +158,19 @@ div.mfp-title {
     margin: auto;
 }
 
+table{
+    margin:auto;
+}
+
+tr,td {
+    padding:10px;
+}
+
+td button{
+    font-size:medium;
+}
+
+
 .nav {
     display: block;
     width: 140px;
