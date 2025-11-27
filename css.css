@@ -166,8 +166,12 @@ tr,td {
     padding:10px;
 }
 
-td button{
-    font-size:medium;
+a.download{
+    display:block;
+    border: 1px grey solid;
+    padding:8px;
+    margin:auto;
+    
 }
 
 
